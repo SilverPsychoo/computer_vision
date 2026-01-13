@@ -13,6 +13,7 @@ try:
     propina = float(propina_txt)/100
 except ValueError:
     print("Entrada invalida. Utiliza números:")
+    exit(1)
     
 monto_iva = subtotal * iva
 monto_propina = subtotal * propina
