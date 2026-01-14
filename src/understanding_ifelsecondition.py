@@ -10,3 +10,4 @@ elif 60 <= user_age < 100:
     print("Eres adulto mayor.")
 else:
     print("Descansa en paz.")
+    
