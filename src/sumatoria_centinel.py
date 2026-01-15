@@ -18,7 +18,7 @@ minimo = None
 maximo = None
 
 while True:
-    user_message = """"
+    user_message = """
     Ingresa tu importe (MXN)
     Si quieres dejar de capturar importes
     puedes ingresar en cualquier momento
@@ -46,8 +46,8 @@ if conteo == 0:
     print("No se capturaron importes.")
 else:
     print("="*32)
-    print(f"{conteo}")
-    print(f"{suma}")
-    print(f"{minimo}")
-    print(f"{maximo}")
+    print("La cantidad de numeros ingresados es: ", f"{conteo}")
+    print("La suma de los importes es: ", f"{suma}")
+    print("El importe mínimo es: ", f"{minimo}")
+    print("El importe máximo es: ", f"{maximo}")
 print("Programa finalizado")
