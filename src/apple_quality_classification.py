@@ -86,14 +86,14 @@ callbacks = [
         patience=50,
         restore_best_weights=True)
 ]
-
+model.summary()
 history = model.fit(
     X_train_s, y_train,
     validation_data=(X_val_s, y_val),
     epochs=300,
     batch_size=16,
     class_weight=class_weigh,
-    verbose=1,
+    verbose=0,
     callbacks=callbacks
 )
 

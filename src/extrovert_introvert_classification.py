@@ -10,12 +10,12 @@ from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 
 # Para tener siempre una misma semilla de aletoriedad
-SEED = 42
+SEED = 28
 np.random.seed(SEED)
 tf.random.set_seed(SEED)
 
 # Cargar el DataSet
-data = pd.read_csv("data/personality_dataset.csv")
+data = pd.read_csv("data\personality_dataset.csv")
 
 # Convertir variables categóricas
 data = data.replace({"Yes":1,"No":0})
