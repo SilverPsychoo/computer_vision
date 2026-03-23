@@ -53,11 +53,11 @@ X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 X_test = scaler.transform(X_test)
 
-# Class weights (CLAVE)
+# Class weights
 weights = compute_class_weight("balanced", classes=np.unique(y_train), y=y_train)
 class_weight = dict(enumerate(weights))
 
-# MODELO (solo uno)
+# MODELO
 def build_model(input_dim):
     inputs = tf.keras.Input(shape=(input_dim,))
     x = tf.keras.layers.Dense(32, activation="relu")(inputs)
@@ -126,7 +126,7 @@ print(confusion_matrix(y_test, y_pred))
 print("\nReporte")
 print(classification_report(y_test, y_pred, target_names=class_names))
 
-# GRÁFICAS (solo 2)
+# GRÁFICAS
 plt.plot(history.history["loss"], label="Train")
 plt.plot(history.history["val_loss"], label="Val")
 plt.title("Loss")

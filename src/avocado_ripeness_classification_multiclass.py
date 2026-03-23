@@ -30,7 +30,7 @@ X = df.drop(columns=[target_col])
 # One-hot para categóricos
 X = pd.get_dummies(X)
 
-# Limpiar datos (IMPORTANTE)
+# Limpiar datos
 X = X.replace([np.inf, -np.inf], np.nan)
 X = X.fillna(0)
 
@@ -69,7 +69,7 @@ X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 X_test = scaler.transform(X_test)
 
-# Modelo (igual a tu clase)
+# Modelo
 def build_model(input_dim):
 
     inputs = tf.keras.Input(shape=(input_dim,))
@@ -163,7 +163,7 @@ for i in range(min(5, len(X_test))):
     print(f"  Prob      : {y_prob[i]}")
     print()
 
-# Gráficas (igual a clase)
+# Gráficas
 plt.figure(figsize=(10, 4))
 plt.plot(history.history["loss"], label="Train loss")
 plt.plot(history.history["val_loss"], label="Val loss")
